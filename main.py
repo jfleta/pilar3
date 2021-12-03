@@ -1,4 +1,3 @@
-import network
 import network_streamlit
 
 
