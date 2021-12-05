@@ -9,7 +9,9 @@ def draw_diagram():
     st.title('Supply Network Diagram Athena')
 
     # set the physics layout of the network
-    df_data = pd.read_excel('Diagram.xlsx', sheet_name='Sheet1', engine='openpyxl')
+    url = st.secrets["url_diagram"]
+    df_data = pd.read_csv(url, sep=';')
+    print(df_data.head())
 
     # Implement multiselect dropdown menu for option selection (returns a list)
     multiselect_cluster_list = df_data[['CLUSTER']].drop_duplicates().iloc[:, 0].tolist()
