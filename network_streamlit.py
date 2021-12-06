@@ -5,6 +5,9 @@ from pyvis.network import Network
 
 
 def draw_diagram():
+    
+    st.set_page_config(layout="wide")
+    
     # Set header title
     st.title('Supply Network Diagram Athena')
 
