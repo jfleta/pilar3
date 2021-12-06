@@ -13,7 +13,7 @@ def draw_diagram():
 
     # set the physics layout of the network
     url = st.secrets["url_diagram"]
-    df_data = pd.read_csv(url, sep=',')
+    df_data = pd.read_csv(url, sep=';')
     print(df_data.head())
 
     # Implement multiselect dropdown menu for option selection (returns a list)
